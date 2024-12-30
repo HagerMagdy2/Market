@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterLink, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -10,7 +11,8 @@ import { RouterLink, RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterLink,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [HeaderComponent]
 })
