@@ -21,6 +21,8 @@ products:any[]=[];
     this.productsService.getAllProducts().subscribe((res:any)=>{
     this.products = res
     console.log(this.products)
+    } , error=>{
+alert(error.message)
     })
   }
 
