@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AllProductsComponent implements OnInit {
 products:any[]=[];
-product:any[]=[];
+
   constructor(private productsService:ProductsService) { 
   }
 
