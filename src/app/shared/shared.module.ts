@@ -11,10 +11,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
-    RouterLink,
     RouterModule,
     HttpClientModule,
-    FormsModule
   ],
   exports: [HeaderComponent]
 })

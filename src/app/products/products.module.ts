@@ -11,5 +11,6 @@ import { AllProductsComponent } from './components/all-products/all-products.com
     CommonModule
   ],
   
+  
 })
 export class ProductsModule { }
