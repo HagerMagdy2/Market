@@ -1,7 +1,7 @@
 <div class="mt-5">
   <div class="my-2 w-25">
     <label class="my-1" for="">Select Category : </label>
-    <select class="form-control" >
+    <select class="form-control">
       <option value="" disabled selected>Select a category</option>
       <option value="1">Category 1</option>
       <option value="2">Category 2</option>
@@ -10,11 +10,9 @@
     </select>
   </div>
   <div class="row">
-  
-      <div class="col-md-4 mb-3">
-        <ng-container for()>
+    <div class="col-md-4 mb-3" *ngFor="let pro of products">  
         <div class="card" style="width: 18rem">
-          <img [src]="" class="card-img-top" alt="..." />
+          <img [src]="pro.image" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title"></h5>
             <p class="card-text">
@@ -27,8 +25,6 @@
             </div>
           </div>
         </div>
-      </ng-container>
-      </div>
-    
+    </div>
   </div>
 </div>
