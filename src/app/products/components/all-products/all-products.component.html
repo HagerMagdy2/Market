@@ -1,21 +1,21 @@
 <div class="mt-5">
   <div class="my-2 w-25">
     <label class="my-1" for="">Select Category : </label>
-    <select class="form-control">
-      <option value="" disabled selected>Select a category</option>
-      <option value="1">Category 1</option>
-      <option value="2">Category 2</option>
-      <option value="3">Category 3</option>
-      <option value="4">Category 4</option>
+    <select class="form-control" (change)="filterCategory($event)">
+      <option value="All" selected >All</option>
+      <option [value]="categories[0]">{{categories[0]}}</option>
+      <option [value]="categories[1]">{{categories[1]}}</option>
+      <option [value]="categories[2]">{{categories[2]}}</option>
+      <option [value]="categories[3]">{{categories[3]}}</option>
     </select>
   </div>
   <div class="row">
     <div class="col-md-4 mb-3" > 
       
-        <div class="card" style="width: 18rem" >
+        <div class="card" style="width: 16rem;height: 20rem" >
           <img [src]="products[0].image" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title mb-2">{{products[0].title}}</h5>
+            <h5 class="card-title mb-2 ">{{products[0].title}}</h5>
             <p class="card-text">
               {{products[0].description}}
             </p>

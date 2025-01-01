@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
     
     RouterModule,
     HttpClientModule,
+    FormsModule,
+    CommonModule,
   ],
   exports: [HeaderComponent]
 })
