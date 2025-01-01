@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class AllProductsComponent implements OnInit {
   products: any[] = [];
   categories: any[] = [];
+  loading:boolean = false;
 
   constructor(private productsService: ProductsService) {
   }
@@ -21,26 +22,35 @@ export class AllProductsComponent implements OnInit {
   
   }
   getProducts() {
+    this.loading = true;
     this.productsService.getAllProducts().subscribe((res: any) => {
+      this.loading = false; 
       this.products = res 
       console.log(this.products)
     }, error => {
+      this.loading = false; 
       alert(error.message)
     })
   }
   getCategories(){
+    this.loading=true
     this.productsService.getAllCategories().subscribe((res: any) => {
+      this.loading = false;
       this.categories = res
       console.log(this.categories)
     }, error => {
+      this.loading = false;
       console.log(error.message)
     })
   }
 getListByCatName(selectedCat:string){
+  this.loading = true;  
   this.productsService.getProductsByCategory(selectedCat).subscribe((res: any) => {
+    this.loading = false;  
   this.products = res
   console.log(this.products)
   }, error => {
+    this.loading = false;  
     console.log(error.message)
   })
 }

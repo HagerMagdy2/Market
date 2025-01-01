@@ -4,11 +4,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, SpinnerComponent],
   imports: [
     
     RouterModule,
@@ -16,6 +17,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     CommonModule,
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent,SpinnerComponent]
 })
 export class SharedModule { }
